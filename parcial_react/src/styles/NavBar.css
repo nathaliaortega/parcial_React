@@ -1,0 +1,13 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.nav-bar {
+  display: flex;
+  text-align: center;justify-content: space-between;
+  background-color:
+    rgba(56, 97, 140, 1);
+  color:white;
+  height: 30px;
+}

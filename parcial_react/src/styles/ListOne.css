@@ -1,0 +1,27 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.listOne{
+  
+  padding:20px;
+  background-color:#CAE2FF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.one{
+  
+  grid-column-start: 2;
+}
+.two{
+  grid-column-start: 1;
+
+}
+.cardPlayer{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  padding:10px;
+  border-radius:10px;
+  display: grid;
+  
+}

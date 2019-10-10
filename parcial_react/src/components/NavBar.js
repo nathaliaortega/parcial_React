@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Nav from 'react-bootstrap/Nav';
+import "../styles/NavBar.css";
 const axios = require('axios');
 
 
@@ -16,7 +17,6 @@ class NavBar extends Component {
         this.setState({
           menuOptions: response.data.atp.options
           })
-          console.log(this.state.menuOptions);
           
       })
       .catch(function (error) {
@@ -30,11 +30,12 @@ class NavBar extends Component {
     const{menuOptions}=this.state;
     let menu=[];
     for(var i=0;i<menuOptions.length;i++){
-      menu.push( <Nav.Item>{menuOptions[i]}</Nav.Item>)
+      
+      menu.push(<Nav.Item key={menuOptions[i]}>{menuOptions[i]}</Nav.Item>)
     }
     
     return (
-      <Nav
+      <Nav className="nav-bar"
         activeKey="/home"
         onSelect={selectedKey => alert(`selected ${selectedKey}`)}
       >
